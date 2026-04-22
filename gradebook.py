@@ -32,4 +32,7 @@ def average(scores):
 
 
 def curve_score(score, bonus):
+    if bonus < 0:
+        raise valueError("Bonus must be positive")
+    
     return min((score + bonus), 100)
