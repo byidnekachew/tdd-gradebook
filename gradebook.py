@@ -25,7 +25,9 @@ def average(scores):
         raise ValueError("List is empty")
     if not isinstance(scores, list):
         raise TypeError("scores most be in list")
-    
+    if not all(isinstance(s, (int, float))for s in scores):
+        raise TypeError("all items in average scores must be numbers")
+
     return round(sum(scores) / len(scores), 2)
 
 
