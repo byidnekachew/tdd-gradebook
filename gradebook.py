@@ -23,6 +23,8 @@ def is_passing(score):
 def average(scores):
     if len(scores) == 0:
         raise ValueError("List is empty")
+    if not isinstance(scores, list):
+        raise TypeError("scores most be in list")
     
     return round(sum(scores) / len(scores), 2)
 
