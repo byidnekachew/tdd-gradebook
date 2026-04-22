@@ -34,5 +34,6 @@ def average(scores):
 def curve_score(score, bonus):
     if bonus < 0:
         raise ValueError("Bonus must be positive")
-    
+    if not isInstance(score, (int, float)) or not isInstance(bonus, (int, float)):
+        raise TypeError("Score and bonus must be numeric")
     return min((score + bonus), 100)
