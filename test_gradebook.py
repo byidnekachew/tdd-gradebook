@@ -38,3 +38,5 @@ def is_passing_invalid_type():
 # Tests for average
 def test_average_works():
     assert average([80, 90, 70]) == 80.0
+
+

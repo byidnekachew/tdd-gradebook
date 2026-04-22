@@ -21,7 +21,7 @@ def is_passing(score):
 
 
 def average(scores):
-    return 80.0
+    return round(sum(scores) / len(scores), 2)
 
 
 def curve_score(score, bonus):
