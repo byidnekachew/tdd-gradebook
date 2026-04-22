@@ -32,4 +32,4 @@ def average(scores):
 
 
 def curve_score(score, bonus):
-    return 85
+    return min((score + bonus), 100)
